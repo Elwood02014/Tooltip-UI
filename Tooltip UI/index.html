@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="styles.css">
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Подсказка при наведении</title>
+  <style>
+    .wrapper {
+      position: relative;
+      display: inline-block;
+      margin: 100px;
+    }
+
+    .box {
+      padding: 20px 40px;
+      background-color: #3498db;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .tooltip {
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #222;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s;
+      font-size: 14px;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .wrapper:hover .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="box">Наведи на меня</div>
+    <div class="tooltip">Это подсказка к блоку</div>
+  </div>
+
+</body>
+</html>
